@@ -62,3 +62,11 @@ disallow_untyped_defs = true
 #warn_unused_ignores = true
 exclude = ["scripts", "docs", "test"]
 ignore_missing_imports = true
+
+[tool.bandit]
+exclude_dirs = ["tests", "."]
+tests = ["B201", "B301"]
+skips = ["B101", "B601"]
+
+[tool.flake8]
+max-line-length = 119
